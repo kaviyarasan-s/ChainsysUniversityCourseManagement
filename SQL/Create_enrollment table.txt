@@ -1,0 +1,12 @@
+create table course_enrollment(
+id int primary key,
+user_id int,
+course_id int ,
+start_date timestamp,
+end_date timestamp,
+status varchar2(50),
+constraints userregistration_id_fk foreign key(user_id) references users_registration(id),
+constraints chainsyscourse_id_fk foreign key(course_id) references chainsys_course(id)
+);
+
+create sequence course_enrollment_id_seq  start with 1 increment by 1;

@@ -1,0 +1,10 @@
+create table users_registration (
+id int primary key,
+name varchar2(100),
+email varchar2(100) unique,
+phone varchar2(10) unique,
+password varchar2(100) default 'pass123',
+message varchar2(4000)
+);
+
+create sequence users_registration_id_seq start with 1 increment by 1;
